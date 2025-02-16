@@ -1,8 +1,10 @@
-# Casual Study: “Spot the Difference” with Flashing Images, How Response Time in the Task Relates to Neurodevelopmental Conditions and Vision Impairments
+# Casual Study: “Spot the Difference” with Flashing Images, How Response Time in the Task Relates to Apparent Image Size (Angular Size) and Neurodivergence
 
 ## Tech
 
-Frontend Framework: Svelte
+Frontend Framework: SvelteKit
+
+UI Framework: Skeleton
 
 Deployment Platform: Vercel
 
