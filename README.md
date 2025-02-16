@@ -16,7 +16,9 @@ Database: MongoDB
 
 r/SampleSize Subreddit:
 
-TurboBP Discord Server: https://discord.gg/hFh5rpdX8p
+TurboBP YouTube Channel Community Tab
+
+TurboBP Discord Server
 
 ## Findings
 
