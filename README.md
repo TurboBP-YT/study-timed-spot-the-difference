@@ -1,4 +1,4 @@
-# Casual Study: Timed “Spot the Difference” with Flashing Images, How Response Time in the Task Relates to Neurodevelopmental Conditions and Vision Impairments
+# Casual Study: “Spot the Difference” with Flashing Images, How Response Time in the Task Relates to Neurodevelopmental Conditions and Vision Impairments
 
 ## Tech
 
