@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+		"composite": true,
+
+        "strict": true,
+        "target": "ES6",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "types": ["vite/client"],
+//      "noEmit": true,
+        "isolatedModules": true
+    },
+    "include": [
+        "vite.config.*",
+        "svelte.config.*",
+        "tailwind.config.*",
+        "postcss.config.*",
+    ]
+}

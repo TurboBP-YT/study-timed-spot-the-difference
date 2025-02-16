@@ -10,6 +10,8 @@ Deployment Platform: Vercel
 
 Backend: Vercel Serverless Functions
 
+Runtime: Node.js 22
+
 Database: MongoDB
 
 ## Sample Sources
