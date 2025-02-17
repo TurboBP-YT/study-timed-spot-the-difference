@@ -9,6 +9,7 @@ export async function GET(request: Request) {
     while (true) {
         let isFound:boolean = true; // ensures unique IDs
         await dbOperation(client,async (col:Collection) => {
+            console.log('db op');
             isFound = (await col.countDocuments({ "identifier": uuid })) > 0;
         }).catch(console.dir);
         if (!isFound) {
