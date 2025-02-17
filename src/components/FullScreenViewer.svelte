@@ -29,8 +29,8 @@
   }
 
   const TARGET_DIAMETER_ADJUSTMENT_FACTORS = [1, 1.1, 1.2];
-  const DUR_POST_PASS_ANSWER_DISPLAY_S = 3;
-  const DUR_FLASH_INTERVAL_S = 1;
+  const DUR_POST_PASS_ANSWER_DISPLAY_S = 2.5;
+  const DUR_FLASH_INTERVAL_S = 1.0;
 
   let nTries: number = $state(0);
   let tStart: number;
