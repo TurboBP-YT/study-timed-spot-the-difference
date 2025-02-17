@@ -313,12 +313,12 @@
         targetY={BANK_IMAGES_INFO[BANK_IMAGES_NAMES[indexCurrentImage]].targetY}
         targetDiameter={BANK_IMAGES_INFO[BANK_IMAGES_NAMES[indexCurrentImage]]
           .targetDiameter}
-        onPass={doesTaskCompletionAdvanceSections
-          ? (tStart: number, tEnd: number, nTries: number) => {
-              recordImageTaskPerformance(tStart, tEnd, nTries);
+        onPassImmediate={recordImageTaskPerformance}
+        onPassAfterDelay={doesTaskCompletionAdvanceSections
+          ? () => {
               onNext(false);
             }
-          : recordImageTaskPerformance}
+          : () => undefined}
       ></FullScreenViewer>
     {/key}
   {/if}

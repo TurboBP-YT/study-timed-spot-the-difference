@@ -12,13 +12,15 @@
     targetX,
     targetY,
     targetDiameter,
-    onPass,
+    onPassImmediate,
+    onPassAfterDelay,
   }: {
     imagesPairName: string;
     targetX: number;
     targetY: number;
     targetDiameter: number;
-    onPass: Function;
+    onPassImmediate: Function;
+    onPassAfterDelay: Function;
   } = $props();
 
   let isShowAnswerMode: boolean = $state(false);
@@ -99,11 +101,8 @@
     isShowAnswerMode = true;
 
     tEnd = Date.now();
-
-    setTimeout(
-      () => onPass(tStart, tEnd, nTries),
-      1000 * DUR_POST_PASS_ANSWER_DISPLAY_S
-    );
+    onPassImmediate(tStart, tEnd, nTries);
+    setTimeout(onPassAfterDelay, 1000 * DUR_POST_PASS_ANSWER_DISPLAY_S);
   }
 </script>
 
