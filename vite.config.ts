@@ -1,10 +1,17 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import Icons from 'unplugin-icons/vite'
+
 import { defineConfig } from 'vite';
 
-import postcss from './postcss.config'
+import postcss from './postcss.config';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit(),
+		Icons({
+			compiler: 'svelte',
+		}),
+	],
 	css: {
 	  	postcss,
 	},

@@ -17,5 +17,6 @@
         "svelte.config.*",
         "tailwind.config.*",
         "postcss.config.*",
-    ]
+    ],
+    "types": ["unplugin-icons/types/svelte"]
 }

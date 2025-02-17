@@ -1,3 +1,37 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+:root {
+    font-size: calc(1.25 * var(--vd, 1.414vmin)) !important;
+}
+
+body {
+    @apply bg-surface-50-900-token;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+.progress-bar-meter {
+    height: 100%;
+}
