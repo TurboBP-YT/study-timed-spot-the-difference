@@ -1,5 +1,5 @@
 import { v6 as uuidv6 } from 'uuid';
-import { dbOperation, getClient } from './db';
+import { dbOperation, getClient } from './db.js';
 import { Collection } from 'mongodb';
 
 export async function GET(request: Request) {

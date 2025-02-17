@@ -1,4 +1,4 @@
-import { dbOperation, getClient } from './db';
+import { dbOperation, getClient } from './db.js';
 import { Collection } from 'mongodb';
 
 export async function POST(request: Request) {
