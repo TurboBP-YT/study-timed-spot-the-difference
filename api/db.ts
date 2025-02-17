@@ -1,4 +1,3 @@
-
 import { MongoClient, ServerApiVersion } from 'mongodb';
 const uri:string = "mongodb+srv://<db_username>:<db_password>@cluster0.4ruts.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 

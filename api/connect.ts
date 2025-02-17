@@ -14,6 +14,7 @@ export async function GET(request: Request) {
         if (!isFound) {
             break;
         }
+        uuid = uuidv6();
     }
     return Response.json({uuid});
 }

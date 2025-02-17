@@ -5,7 +5,7 @@ export const load: PageLoad = async ({ params }) => {
     let participantUUID:string = '';
 
     try {
-        const response = await fetch('/api/connect');
+        const response = await fetch('https://study-timed-spot-the-difference.vercel.app/api/connect');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
