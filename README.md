@@ -1,4 +1,4 @@
-# Casual Study: “Spot the Difference” with Flashing Images, How Response Time in the Task Relates to Apparent Image Size (Angular Size) and Neurodivergence
+# Casual Study: “Spot the Difference” with Flashing Images, How Response Time in the Task Relates to Apparent Image Size (Angular Size) as Viewed, Personality, and Neurodivergence
 
 ## Tech
 
@@ -13,6 +13,8 @@ Backend: Vercel Serverless Functions
 Runtime: Node.js 22
 
 Database: MongoDB
+
+Data Collection: Google Forms
 
 ## Sample Sources
 

@@ -1,7 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import { viewportDiagonalHundredthInPixels } from "../store";
+  import {
+    viewportDiagonalHundredthInPixels,
+    isDeviceDetectedMobile,
+  } from "../store";
   import { CIRC_IMAGE_DIAM_DIAG_RATIO } from "../routes/+page.svelte";
 
   let {
@@ -60,6 +63,10 @@
   }
 
   function onClick(e: MouseEvent) {
+    if (isShowAnswerMode) {
+      return;
+    }
+
     nTries += 1;
 
     const clickX = e.clientX;
@@ -76,7 +83,13 @@
     const clickXrel = (clickX - (ctrX - d / 2)) / d;
     const clickYrel = (clickY - (ctrY - d / 2)) / d;
 
-    if (distance(clickXrel, clickYrel, ctrX, ctrY) > targetDiameter / 2) {
+    const MOBILE_TAP_TARGET_SIZE_FACTOR = 1.25;
+    if (
+      distance(clickXrel, clickYrel, targetX, targetY) >
+      (adjustedTargetDiameter *
+        ($isDeviceDetectedMobile ? MOBILE_TAP_TARGET_SIZE_FACTOR : 1)) /
+        2
+    ) {
       spawnPopup(clickX, clickY, false);
       return; // clicked outside target zone
     }
@@ -94,7 +107,11 @@
   }
 </script>
 
-<div class="backdrop" on:click={onClick}>
+<div
+  class="backdrop"
+  on:click={onClick}
+  style={`background:${isShowAnswerMode ? "green" : "black"};`}
+>
   <img
     src={`/study/${imagesPairName}-a.jpg`}
     class="circle-img"
@@ -119,9 +136,9 @@
     right: 0;
     bottom: 0;
     background: black;
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     box-shadow: 0 0 0 calc(100 * var(--vd)) black;
   }
   .circle-img {
@@ -131,9 +148,15 @@
     height: calc(100 / 3 * var(--vd));
     user-select: none;
     pointer-events: none;
+    display: none;
     visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .show {
+    display: initial !important;
     visibility: visible !important;
   }
   .circle-img.animate {

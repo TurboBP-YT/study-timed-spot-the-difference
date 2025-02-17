@@ -1,13 +1,25 @@
 <script lang="ts">
   import Button from "../components/Button.svelte";
-  import DistanceEntry from "../components/DistanceEntry.svelte";
+  import DistanceEntry, {
+    type MeasurementUnit,
+  } from "../components/DistanceEntry.svelte";
 
   let {
     onNext,
     vwprtDiagAngleDeg,
-  }: { onNext: Function; vwprtDiagAngleDeg: number } = $props();
 
-  let checkboxIsChecked: boolean = $state(false);
+    input_viewportDiagonal = $bindable(),
+    input_viewportDiagonalUnit = $bindable(),
+    input_screenEyeDistance = $bindable(),
+    input_screenEyeDistanceUnit = $bindable(),
+  }: {
+    onNext: Function;
+    vwprtDiagAngleDeg: number;
+    input_viewportDiagonal: string;
+    input_viewportDiagonalUnit: MeasurementUnit;
+    input_screenEyeDistance: string;
+    input_screenEyeDistanceUnit: MeasurementUnit;
+  } = $props();
 </script>
 
 <h2>Viewing Conditions: Apparent Size</h2>
@@ -22,13 +34,21 @@
   <li><span>•</span><span class="flex-auto">your viewing distance</span></li>
 </ol>
 <div class="mb-5">
-  <DistanceEntry name="Length of the Shown Diagonal"></DistanceEntry>
+  <DistanceEntry
+    name="Length of the Shown Diagonal"
+    bind:value={input_viewportDiagonal}
+    bind:unit={input_viewportDiagonalUnit}
+  ></DistanceEntry>
   <p class="mt-1 opacity-50">
     <small>Optional</small>
   </p>
 </div>
 <div class="mb-5">
-  <DistanceEntry name="View Distance"></DistanceEntry>
+  <DistanceEntry
+    name="View Distance"
+    bind:value={input_screenEyeDistance}
+    bind:unit={input_screenEyeDistanceUnit}
+  ></DistanceEntry>
   <p class="mt-1 opacity-50">
     <small>Optional</small>
   </p>

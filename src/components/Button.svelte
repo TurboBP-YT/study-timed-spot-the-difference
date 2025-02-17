@@ -25,6 +25,9 @@
     href={disabled ? "#" : href}
     class:disabled
     onclick={(e) => (disabled ? [e.preventDefault(), false][1] : true)}
+    target={window.location.hostname === new URL(href).hostname
+      ? "_self"
+      : "_blank"}
   >
     {#if kind === "backward"}<ArrowLeft></ArrowLeft>{/if}
     <slot />
