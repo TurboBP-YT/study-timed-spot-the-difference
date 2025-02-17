@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         const query = { identifier: bodyJSON.identifier };
         const update = { $set: bodyJSON};
         const options = { upsert: true };
-        col.updateOne(query, update, options);
+        await col.updateOne(query, update, options);
     }).catch(console.dir);
     if (!dbAccessWorked) {
         return new Response('failed', {
