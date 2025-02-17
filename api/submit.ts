@@ -27,8 +27,11 @@ export async function POST(request: Request) {
         else {
             if (bodyJSON.nthShipment > findResult?.nthShipment) {
                 await col.updateOne({_id:findResult._id}, update, options);
+                console.log('document updated')
             }
-            console.log('rejected outdated data reporting');
+            else {
+                console.log('rejected outdated data reporting');
+            }
         }
         dbAccessWorked = true;
     }).catch(console.dir);
