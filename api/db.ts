@@ -12,6 +12,7 @@ export function getClient():MongoClient {
 }
 
 export async function dbOperation(client:MongoClient, callback:Function) {
+    console.log('start dbOperation');
     try {
       // Connects the client to the server	(optional starting in v4.7)
       await client.connect();
@@ -20,4 +21,5 @@ export async function dbOperation(client:MongoClient, callback:Function) {
       // Ensures that the client will close when you finish/error
       await client.close();
     }
+    console.log('end dbOperation');
 }
