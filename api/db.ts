@@ -1,9 +1,9 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
-const uri:string = "mongodb+srv://<db_username>:<db_password>@cluster0.4ruts.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri:string = "mongodb+srv://<mongo_username>:<mongo_password>@cluster0.4ruts.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 export function getClient():MongoClient {
-  console.log('db username = ' + process.env['db_username'])
-    return new MongoClient(uri.replace('<db_username>',process.env['db_username']).replace('<db_password>',process.env['db_password']), {
+  console.log('db username = ' + process.env['mongo_username'])
+    return new MongoClient(uri.replace('<mongo_username>',process.env['mongo_username']).replace('<mongo_password>',process.env['mongo_password']), {
         serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
