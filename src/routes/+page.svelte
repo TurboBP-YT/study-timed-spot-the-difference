@@ -195,7 +195,6 @@
     tEnd: number,
     nTries: number
   ) {
-    isViewerEnabled = false;
     const tDur: number = tEnd - tStart;
     imageTasksData.push({
       order: indexCurrentImage,
@@ -207,7 +206,6 @@
     });
     nCurrentSectionTasksDone++;
     nStepsDone++;
-    indexCurrentImage++;
 
     pushData();
   }
@@ -314,11 +312,13 @@
         targetDiameter={BANK_IMAGES_INFO[BANK_IMAGES_NAMES[indexCurrentImage]]
           .targetDiameter}
         onPassImmediate={recordImageTaskPerformance}
-        onPassAfterDelay={doesTaskCompletionAdvanceSections
-          ? () => {
-              onNext(false);
-            }
-          : () => undefined}
+        onPassAfterDelay={() => {
+          isViewerEnabled = false;
+          if (doesTaskCompletionAdvanceSections) {
+            onNext(false);
+          }
+          indexCurrentImage++;
+        }}
       ></FullScreenViewer>
     {/key}
   {/if}

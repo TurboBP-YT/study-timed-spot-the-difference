@@ -1,5 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import Cover from "../components/Cover.svelte";
+  import Button from "../components/Button.svelte";
 
   let href: string;
 
@@ -8,12 +10,14 @@
   });
 </script>
 
-<h1>404</h1>
+<Cover>
+  <h1>404</h1>
 
-<p>URL: {href}</p>
+  <p>URL: {href}</p>
 
-<p>
-  <a href="/">Homepage</a>
-</p>
+  <p>
+    <Button href="/">Homepage</Button>
+  </p>
 
-<p>&copy; 2025 TurboBP</p>
+  <p>&copy; 2025 TurboBP</p>
+</Cover>
