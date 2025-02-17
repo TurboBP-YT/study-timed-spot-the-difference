@@ -9,18 +9,23 @@ export async function POST(request: Request) {
     }
     catch {
         return new Response('failed', {
-            status: 200,
+            status: 400,
         });
     }
 
     const client = getClient();
 
+    let dbAccessWorked:boolean = false;
     await dbOperation(client,async (col:Collection) => {
         const query = { identifier: bodyJSON.identifier };
         const update = { $set: bodyJSON};
         const options = { upsert: true };
         col.updateOne(query, update, options);
     }).catch(console.dir);
-
+    if (!dbAccessWorked) {
+        return new Response('failed', {
+            status: 500,
+        });
+    }
     return new Response('accepted');
 }
