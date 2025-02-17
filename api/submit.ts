@@ -20,7 +20,16 @@ export async function POST(request: Request) {
         const query = { identifier: bodyJSON.identifier };
         const update = { $set: bodyJSON};
         const options = { upsert: true };
-        await col.updateOne(query, update, options);
+        const findResult = await col.findOne(query);
+        if (findResult === null) {
+            await col.updateOne(query, update, options);
+        }
+        else {
+            if (bodyJSON.nthShipment > findResult?.nthShipment) {
+                await col.updateOne({_id:findResult._id}, update, options);
+            }
+            console.log('rejected outdated data reporting');
+        }
         dbAccessWorked = true;
     }).catch(console.dir);
     if (!dbAccessWorked) {
