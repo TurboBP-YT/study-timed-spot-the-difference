@@ -30,7 +30,7 @@
     counter++;
   }
 
-  const TARGET_DIAMETER_ADJUSTMENT_FACTORS = [1, 1.1, 1.2];
+  const TARGET_DIAMETER_ADJUSTMENT_FACTORS = [1, 1.125, 1.25];
   const DUR_POST_PASS_ANSWER_DISPLAY_S = 2.5;
   const DUR_FLASH_INTERVAL_S = 1.0;
 
@@ -85,7 +85,7 @@
     const clickXrel = (clickX - (ctrX - d / 2)) / d;
     const clickYrel = (clickY - (ctrY - d / 2)) / d;
 
-    const MOBILE_TAP_TARGET_SIZE_FACTOR = 1.25;
+    const MOBILE_TAP_TARGET_SIZE_FACTOR = 1.5;
     if (
       distance(clickXrel, clickYrel, targetX, targetY) >
       (adjustedTargetDiameter *

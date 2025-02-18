@@ -135,6 +135,17 @@
     updateViewportDiagonalHundredthInPixels();
     window.addEventListener("resize", updateViewportDiagonalHundredthInPixels);
     isDeviceDetectedMobile.set(mobileCheck());
+
+    for (let imgFileNameSuffix of ["a", "b"]) {
+      for (let imgName of BANK_IMAGES_NAMES) {
+        const img = new Image();
+        img.onload = () => {
+          preloadedImages.push(img);
+          console.info("image loaded : " + img.src);
+        };
+        img.src = `/study/${imgName}-${imgFileNameSuffix}.jpg`;
+      }
+    }
   });
 
   function onNext(doAdvanceProgressMeter: boolean = true) {
@@ -238,6 +249,7 @@
   }
 
   let participantUUID: string = $derived(data.participantUUID);
+  let preloadedImages: Array<HTMLImageElement> = [];
 
   let doesTaskCompletionAdvanceSections: boolean = $state(false);
   let isViewerEnabled: boolean = $state(false);
@@ -258,7 +270,7 @@
   {/each}
 </svelte:head>
 
-{#if participantUUID.length}
+{#if participantUUID.length && preloadedImages.length >= BANK_IMAGES_NAMES.length}
   <StatusBar
     value={nStepsDone}
     max={N_OTHER_STEPS + N_Q_PRACTICE + N_Q_NONPRACTICE}
