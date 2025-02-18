@@ -249,7 +249,7 @@
   }
 
   let participantUUID: string = $derived(data.participantUUID);
-  let preloadedImages: Array<HTMLImageElement> = [];
+  let preloadedImages: Array<HTMLImageElement> = $state([]);
 
   let doesTaskCompletionAdvanceSections: boolean = $state(false);
   let isViewerEnabled: boolean = $state(false);
