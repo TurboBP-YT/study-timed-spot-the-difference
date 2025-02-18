@@ -6,6 +6,8 @@ Frontend Framework: SvelteKit
 
 UI Framework: Skeleton
 
+Icons: Unplugin Icons (MDI Icons)
+
 Deployment Platform: Vercel
 
 Backend: Vercel Serverless Functions
@@ -18,7 +20,7 @@ Data Collection: Google Forms
 
 ## Sample Sources
 
-r/SampleSize Subreddit:
+r/SampleSize Subreddit: https://www.reddit.com/r/SampleSize/comments/1is5ybn
 
 TurboBP YouTube Channel Community Tab
 
