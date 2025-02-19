@@ -18,9 +18,13 @@ Database: MongoDB
 
 Data Collection: Google Forms
 
+Visualization: Matplotlib (Python)
+
 ## Sample Sources
 
-r/SampleSize Subreddit: https://www.reddit.com/r/SampleSize/comments/1is5ybn
+r/SampleSize Reddit Community: https://www.reddit.com/r/SampleSize/comments/1is5ybn
+
+r/SurveyExchange Reddit Community: https://www.reddit.com/r/SurveyExchange/comments/1itgp7t
 
 TurboBP YouTube Channel Community Tab
 
