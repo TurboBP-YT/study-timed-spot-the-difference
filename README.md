@@ -26,6 +26,8 @@ r/SampleSize Reddit Community: https://www.reddit.com/r/SampleSize/comments/1is5
 
 r/SurveyExchange Reddit Community: https://www.reddit.com/r/SurveyExchange/comments/1itgp7t
 
+r/TakeMySurvey Reddit Community: https://www.reddit.com/r/takemysurvey/comments/1ith8ak
+
 TurboBP YouTube Channel Community Tab
 
 TurboBP Discord Server
