@@ -64,6 +64,8 @@
     }, 100000);
   }
 
+  let clickCatchElement: HTMLDivElement;
+
   function onClick(e: MouseEvent) {
     if (isShowAnswerMode) {
       return;
@@ -73,6 +75,7 @@
 
     const clickX = e.clientX;
     const clickY = e.clientY;
+    /*
     const ctrX = window.innerWidth / 2;
     const ctrY = window.innerHeight / 2;
     const d =
@@ -84,6 +87,11 @@
 
     const clickXrel = (clickX - (ctrX - d / 2)) / d;
     const clickYrel = (clickY - (ctrY - d / 2)) / d;
+    */
+
+    const rect: DOMRect = clickCatchElement.getBoundingClientRect();
+    const clickXrel: number = (clickX - rect.left) / rect.width;
+    const clickYrel: number = (clickY - rect.right) / rect.height;
 
     const MOBILE_TAP_TARGET_SIZE_FACTOR = 1.5;
     if (
@@ -108,7 +116,6 @@
 
 <div
   class="backdrop"
-  on:click={onClick}
   style={`background:${isShowAnswerMode ? "green" : "black"};`}
 >
   <img
@@ -124,6 +131,11 @@
     class:animate={isShowAnswerMode}
     alt="b"
   />
+  <div
+    class="click-catch"
+    on:click={onClick}
+    bind:this={clickCatchElement}
+  ></div>
 </div>
 
 <style>
