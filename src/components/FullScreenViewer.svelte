@@ -91,7 +91,7 @@
 
     const rect: DOMRect = clickCatchElement.getBoundingClientRect();
     const clickXrel: number = (clickX - rect.left) / rect.width;
-    const clickYrel: number = (clickY - rect.right) / rect.height;
+    const clickYrel: number = (clickY - rect.top) / rect.height;
 
     const MOBILE_TAP_TARGET_SIZE_FACTOR = 1.5;
     if (
