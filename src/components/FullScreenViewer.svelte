@@ -100,11 +100,11 @@
         ($isDeviceDetectedMobile ? MOBILE_TAP_TARGET_SIZE_FACTOR : 1)) /
         2
     ) {
-      spawnPopup(clickX, clickY, false);
+      spawnPopup(e.pageX, e.pageY, false);
       return; // clicked outside target zone
     }
 
-    spawnPopup(clickX, clickY, true);
+    spawnPopup(e.pageX, e.pageY, true);
 
     isShowAnswerMode = true;
 
