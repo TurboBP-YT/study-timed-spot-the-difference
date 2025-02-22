@@ -1,5 +1,6 @@
 <script module>
   export const CIRC_IMAGE_DIAM_DIAG_RATIO: number = 2 / 5;
+  export const SAFE_AREA_DIAM_RATIO: number = 0.99;
 
   function shuffle(array: Array<any>) {
     // https://stackoverflow.com/a/2450976
@@ -124,7 +125,7 @@
     //  Math.max(window.innerWidth, window.innerHeight);
 
     isAspectRatioSupported =
-      diagonalInPixels * CIRC_IMAGE_DIAM_DIAG_RATIO <
+      diagonalInPixels * CIRC_IMAGE_DIAM_DIAG_RATIO * SAFE_AREA_DIAM_RATIO <
       Math.min(window.innerWidth, window.innerHeight);
 
     vwprtDiagAngleDeg =
