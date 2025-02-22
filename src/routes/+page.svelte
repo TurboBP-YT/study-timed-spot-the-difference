@@ -1,5 +1,5 @@
 <script module>
-  export const CIRC_IMAGE_DIAM_DIAG_RATIO: number = 1 / 3;
+  export const CIRC_IMAGE_DIAM_DIAG_RATIO: number = 2 / 5;
 
   function shuffle(array: Array<any>) {
     // https://stackoverflow.com/a/2450976
