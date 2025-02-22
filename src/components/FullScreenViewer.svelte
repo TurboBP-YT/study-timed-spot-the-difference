@@ -152,7 +152,8 @@
     align-items: center;*/
     box-shadow: 0 0 0 calc(100 * var(--vd)) black;
   }
-  .circle-img {
+  .circle-img,
+  .click-catch {
     overflow: hidden;
     border-radius: 50%;
     width: calc(40 * var(--vd));
@@ -165,6 +166,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .click-catch {
+    pointer-events: all !important;
+    display: block !important;
+    visibility: visible !important;
   }
   .show {
     display: initial !important;
