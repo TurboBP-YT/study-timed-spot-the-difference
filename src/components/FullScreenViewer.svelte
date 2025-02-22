@@ -143,8 +143,8 @@
   .circle-img {
     overflow: hidden;
     border-radius: 50%;
-    width: calc(100 / 3 * var(--vd));
-    height: calc(100 / 3 * var(--vd));
+    width: calc(40 * var(--vd));
+    height: calc(40 * var(--vd));
     user-select: none;
     pointer-events: none;
     display: none;
