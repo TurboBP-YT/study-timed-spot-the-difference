@@ -28,6 +28,7 @@ r/SampleSize Reddit Community:
 
 r/SurveyExchange Reddit Community:
 1. https://www.reddit.com/r/SurveyExchange/comments/1itgp7t (automatically removed)
+2. https://www.reddit.com/r/SurveyExchange/comments/1iw49yj
 
 r/TakeMySurvey Reddit Community: https://www.reddit.com/r/takemysurvey/comments/1ith8ak
 
