@@ -22,9 +22,12 @@ Visualization: Matplotlib (Python)
 
 ## Sample Sources
 
-r/SampleSize Reddit Community: https://www.reddit.com/r/SampleSize/comments/1is5ybn
+r/SampleSize Reddit Community:
+1. https://www.reddit.com/r/SampleSize/comments/1is5ybn (automatically removed)
+2. https://www.reddit.com/r/SampleSize/comments/1iw3jpp
 
-r/SurveyExchange Reddit Community: https://www.reddit.com/r/SurveyExchange/comments/1itgp7t
+r/SurveyExchange Reddit Community:
+1. https://www.reddit.com/r/SurveyExchange/comments/1itgp7t (automatically removed)
 
 r/TakeMySurvey Reddit Community: https://www.reddit.com/r/takemysurvey/comments/1ith8ak
 
