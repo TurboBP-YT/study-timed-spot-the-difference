@@ -25,6 +25,7 @@ Visualization: Matplotlib (Python)
 r/SampleSize Reddit Community:
 1. https://www.reddit.com/r/SampleSize/comments/1is5ybn (automatically removed)
 2. https://www.reddit.com/r/SampleSize/comments/1iw3jpp
+3. https://www.reddit.com/r/SampleSize/comments/1j3jrsu
 
 r/SurveyExchange Reddit Community:
 1. https://www.reddit.com/r/SurveyExchange/comments/1itgp7t (automatically removed)
