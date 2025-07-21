@@ -18,7 +18,7 @@ Database: MongoDB
 
 Data Collection: Google Forms
 
-Visualization: Matplotlib (Python)
+Visualization: ggplot (R)
 
 ## Sample Sources
 
