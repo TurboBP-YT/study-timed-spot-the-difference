@@ -39,6 +39,6 @@ TurboBP Discord Server
 
 ## Findings
 
-Reddit Post:
+Reddit Post: https://www.reddit.com/r/SampleSize/comments/1m6yemn/results_how_quickly_can_you_spot_the_difference
 
 YouTube Video:
