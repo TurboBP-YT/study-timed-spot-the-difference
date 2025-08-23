@@ -21,9 +21,6 @@ const config = {
         domains: ["study-timed-spot-the-difference.vercel.app"],
       },
     }),
-    prerender: {
-      enabled: false,
-    },
   },
 };
 
