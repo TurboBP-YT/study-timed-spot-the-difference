@@ -1,4 +1,6 @@
 <script module>
+  export const ssr = false;
+
   export const CIRC_IMAGE_DIAM_DIAG_RATIO: number = 2 / 5;
   export const SAFE_AREA_DIAM_RATIO: number = 0.99;
 
