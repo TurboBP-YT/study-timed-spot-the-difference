@@ -2,6 +2,10 @@ import { dbOperation, getClient } from './db.js';
 import { Collection } from 'mongodb';
 
 export async function POST(request: Request) {
+    return new Response('closed', {status:403});
+
+    /*
+
     const rawBody = await request.text();
     let bodyJSON;
     try {
@@ -41,4 +45,6 @@ export async function POST(request: Request) {
         });
     }
     return new Response('accepted');
+
+    */
 }

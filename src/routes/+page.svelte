@@ -100,6 +100,7 @@
   import FullScreenViewer from "../components/FullScreenViewer.svelte";
   import { ProgressRadial } from "@skeletonlabs/skeleton";
   import type { MeasurementUnit } from "../components/DistanceEntry.svelte";
+  import StudyIsClosed from "./StudyIsClosed.svelte";
 
   const N_Q_PRACTICE: number = 1;
   const N_Q_NONPRACTICE: number = 5;
@@ -271,7 +272,12 @@
   {/each}
 </svelte:head>
 
+<Cover z={1000000}><StudyIsClosed /></Cover>
+
+<!--
+
 {#if participantUUID.length && preloadedImages.length >= BANK_IMAGES_NAMES.length}
+
   <StatusBar
     value={nStepsDone}
     max={N_OTHER_STEPS + N_Q_PRACTICE + N_Q_NONPRACTICE}
@@ -344,6 +350,8 @@
 {#if !isAspectRatioSupported}
   <Cover z={100000}><NoticeUnsupported></NoticeUnsupported></Cover>
 {/if}
+
+-->
 
 <style>
   main {
