@@ -18,13 +18,18 @@ Database: MongoDB
 
 Data Collection: Google Forms
 
-Visualization: Matplotlib (Python)
+Visualization: ggplot (R)
 
 ## Sample Sources
 
-r/SampleSize Reddit Community: https://www.reddit.com/r/SampleSize/comments/1is5ybn
+r/SampleSize Reddit Community:
+1. https://www.reddit.com/r/SampleSize/comments/1is5ybn (automatically removed)
+2. https://www.reddit.com/r/SampleSize/comments/1iw3jpp
+3. https://www.reddit.com/r/SampleSize/comments/1j3jrsu
 
-r/SurveyExchange Reddit Community: https://www.reddit.com/r/SurveyExchange/comments/1itgp7t
+r/SurveyExchange Reddit Community:
+1. https://www.reddit.com/r/SurveyExchange/comments/1itgp7t (automatically removed)
+2. https://www.reddit.com/r/SurveyExchange/comments/1iw49yj
 
 r/TakeMySurvey Reddit Community: https://www.reddit.com/r/takemysurvey/comments/1ith8ak
 
@@ -34,6 +39,6 @@ TurboBP Discord Server
 
 ## Findings
 
-Reddit Post:
+Reddit Post: https://www.reddit.com/r/SampleSize/comments/1m6yemn/results_how_quickly_can_you_spot_the_difference
 
 YouTube Video:
